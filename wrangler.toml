@@ -1,8 +1,6 @@
 name = "image-cache-fix"
 type = "javascript"
 
-account_id = "your_account_id"
-zone_id = "your_zone_id"
-route = "renteza.com/images/*"
-workers_dev = false
+account_id = "your-cloudflare-account-id"
+workers_dev = true
 compatibility_date = "2024-07-18"
