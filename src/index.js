@@ -1,18 +1,18 @@
 export default {
-  async fetch(request, env, ctx) {
-    const url = new URL(request.url)
+  async fetch(request) {
+    const url = new URL(request.url);
 
     if (url.pathname.startsWith('/images/')) {
-      const newReq = new Request(request, {
-        headers: (() => {
-          const h = new Headers(request.headers)
-          h.delete('Accept')
-          return h
-        })()
-      })
-      return fetch(newReq)
+      const newHeaders = new Headers(request.headers);
+      newHeaders.delete('Accept');
+
+      const newRequest = new Request(request, {
+        headers: newHeaders,
+      });
+
+      return fetch(newRequest);
     }
 
-    return fetch(request)
+    return fetch(request);
   }
-}
+};
