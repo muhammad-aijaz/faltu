@@ -1,6 +1,4 @@
 name = "image-cache-fix"
-type = "javascript"
-
-account_id = "your-cloudflare-account-id"
+main = "src/index.js"
+compatibility_date = "2025-07-18"
 workers_dev = true
-compatibility_date = "2024-07-18"
